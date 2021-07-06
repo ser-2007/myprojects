@@ -14,7 +14,7 @@ Resources:
         - allow ssh and http
       Tags:
         - Key: Name
-          Value: cf-stack-instance
+          Value: new-instance
 
       UserData:
         Fn::Base64: !Sub |
@@ -23,7 +23,7 @@ Resources:
           yum install -y httpd
           chmod -R 777 /var/www/html
           cd /var/www/html
-          FOLDER="https://raw.githubusercontent.com/ser-2007/Projects/main/101-kittens-carousel-static-website-ec2/static-web/"
+          FOLDER="https://raw.githubusercontent.com/ser-2007/myprojects/main/101-kittens-carousel-static-website-ec2/static-web/"
           wget $FOLDER/index.html
           wget $FOLDER/cat0.jpg
           wget $FOLDER/cat1.jpg
